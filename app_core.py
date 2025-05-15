@@ -117,6 +117,10 @@ def run_app(shop_name):
                     unsafe_allow_html=True
                 )
 
+        spacer(20)
+        with st.expander("🛠 Debug: Raw sales data"):
+            st.json(sales)
+
     if st.session_state.page == "Select Price":
         label = st.session_state.selected_item
         item_key = products[label]
